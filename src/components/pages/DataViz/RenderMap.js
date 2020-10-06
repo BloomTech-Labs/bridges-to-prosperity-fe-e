@@ -16,10 +16,6 @@ import DetailsInfo from './DetailsInfo';
 import FilterBridgesCheckboxes from './FilterBridgesCheckboxes';
 
 let maxBounds = {
-  // minLatitude: -3.688855,
-  // minLongitude: 28.451506,
-  // maxLatitude: -0.670151,
-  // maxLongitude: 31.220318,
   minLatitude: -70,
   minLongitude: -180,
   maxLatitude: 75,
@@ -195,7 +191,7 @@ const RenderMap = () => {
         interactiveLayerIds={['data']}
         onClick={handleClick}
         maxZoom={40}
-        minZoom={1} //was 6.5
+        minZoom={1}
         onLoad={() => {
           if (!mapRef) return;
           const map = mapRef.current.getMap();
