@@ -175,7 +175,6 @@ const RenderMap = () => {
       setFullscreen(false);
     }
   }
-
   return (
     <div className="mapbox-react">
       <ReactMapGL
@@ -185,7 +184,7 @@ const RenderMap = () => {
         {...viewport}
         width={screenWidth}
         height={screenHeight}
-        mapStyle="mapbox://styles/jgertig/ckeughi4a1plr19qqsarcddky"
+        mapStyle="mapbox://styles/meloegel/ckfzuryk61c5z19o8pzd6o5fe"
         onViewportChange={handleViewportChange}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
         interactiveLayerIds={['data']}
