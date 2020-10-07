@@ -138,6 +138,7 @@ const RenderMap = () => {
     let bridge;
 
     if (clickedFeature) {
+      // eslint-disable-next-line array-callback-return
       bridge = bridgeData.find(f => {
         if (f.lat & f.long) {
           if (
@@ -186,6 +187,7 @@ const RenderMap = () => {
         width={screenWidth}
         height={screenHeight}
         mapStyle="mapbox://styles/jgertig/ckeughi4a1plr19qqsarcddky"
+        exit={handleClose}
         onViewportChange={handleViewportChange}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
         interactiveLayerIds={['data']}
