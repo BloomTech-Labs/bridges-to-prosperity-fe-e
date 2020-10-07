@@ -37,13 +37,17 @@ const DetailsInfo = () => {
             )}
           </div>
 
-          {/* <p>Bridge Site Name: {detailsData.bridge_site_name}</p> */}
           <div>
-            <p>Project Stage: {detailsData.project_stage}</p>
+            <p>Project Stage: {detailsData.stage}</p>
             <p>Province: {detailsData.province}</p>
             <p>District: {detailsData.district}</p>
-            <p>Bridge Type: {detailsData.bridge_type}</p>
+            <p>Bridge Type: {detailsData.type}</p>
             <p>Project Sub Stage: {detailsData.sub_stage}</p>
+            {/* need to find locations of data for people/communities served */}
+            <p>
+              Estimate of People Served:{' '}
+              {detailsData.Individuals_directly_served}
+            </p>
           </div>
         </div>
       </div>
