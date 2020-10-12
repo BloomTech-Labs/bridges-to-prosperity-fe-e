@@ -10,9 +10,9 @@ const Markers = React.memo(({ bridgeData, setViewport }) => {
     <>
       {bridgeData &&
         bridgeData.map((marker, index) => {
-          return marker.lat & marker.long ? (
+          return marker.Lat & marker.Long ? (
             <div key={index}>
-              <Marker latitude={marker.lat} longitude={marker.long}>
+              <Marker latitude={marker.Lat} longitude={marker.Long}>
                 <BridgeImage
                   setViewport={setViewport}
                   marker={marker}
@@ -32,15 +32,15 @@ const Markers = React.memo(({ bridgeData, setViewport }) => {
               <div key={index}>
                 <Popup
                   key={index}
-                  latitude={marker.lat}
-                  longitude={marker.long}
+                  latitude={marker.Lat}
+                  longitude={marker.Long}
                   anchor="bottom-right"
                 >
                   <div className="popup">
                     {/* This is the information where stackholder found them most valuable*/}
                     <p>Province: {marker.province}</p>
                     <p>District: {marker.district}</p>
-                    <p>Status: {marker.project_stage}</p>
+                    <p>Status: {marker.stage}</p>
                     {/* bridge site name is coming soon */}
                   </div>
                 </Popup>
