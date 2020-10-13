@@ -17,7 +17,9 @@ const HomePageReact = () => {
   return (
     <div className="container">
       <Navigation />
-      <RenderMap />
+      <div className="map_container">
+        <RenderMap />
+      </div>
       <Footer />
     </div>
   );
