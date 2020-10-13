@@ -2,13 +2,7 @@ import React, { useContext } from 'react';
 import { LinearInterpolator } from 'react-map-gl';
 import { BridgesContext } from '../../../state/bridgesContext';
 
-const BridgeImage = ({
-  marker,
-  setShowPopup,
-  index,
-  setViewport,
-  setSelected,
-}) => {
+const BridgeImage = ({ marker, setViewport }) => {
   const { setDetailsData } = useContext(BridgesContext);
 
   return (
@@ -25,13 +19,6 @@ const BridgeImage = ({
             transitionInterpolator: new LinearInterpolator(),
             zoom: 11,
           });
-        }}
-        onMouseLeave={() => {
-          setShowPopup(false);
-        }}
-        onMouseEnter={() => {
-          setShowPopup(true);
-          setSelected({ index });
         }}
         src={require('../../../styles/imgs/bridgeIconGreen.png')}
       />

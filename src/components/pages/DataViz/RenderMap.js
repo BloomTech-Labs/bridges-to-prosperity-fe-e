@@ -3,7 +3,6 @@ import 'react-map-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import { MenuOutlined } from '@ant-design/icons';
 import useKeypress from '../../common/UseKeypress';
 import bridgeIconGreen from '../../../styles/imgs/bridgeIconGreen.png';
-import RejectedBridges from '../../../styles/imgs/RejectedBridges.png';
 import React, { useState, useRef, useContext } from 'react';
 import ReactMapGL, {
   FullscreenControl,
@@ -234,7 +233,6 @@ const RenderMap = () => {
               countries="rw"
               marker={false}
               onViewportChange={handleViewportChange}
-              // width="10%"
               containerRef={geocoderContainerRef}
               mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
               position="top-left"
