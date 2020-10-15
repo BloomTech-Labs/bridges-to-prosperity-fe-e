@@ -74,20 +74,15 @@ const BridgeCard = () => {
             </div>
             <CardContent id="card_content">
               <Typography
+                id="bridge_name_text"
                 gutterBottom
                 style={{ color: 'white' }}
                 color="inherit"
                 variant="h5"
                 component="h2"
+                width="100%"
               >
                 <strong>{detailsData.bridge_site_name}</strong>
-                <p>
-                  Estimate of People Served:{' '}
-                  {detailsData.Individuals_directly_served}
-                </p>
-                <p>AVG Households Served:{detailsData.inc_income}</p>
-                <p>Economic Impact (RWF) : {detailsData.inc_income_rwf}</p>
-                <p>Economic Impact (USD) : {detailsData.inc_income_usd}</p>
               </Typography>
               <IconButton
                 style={{ color: 'white' }}
@@ -107,6 +102,13 @@ const BridgeCard = () => {
             <CardContent>
               <Typography paragraph>
                 <div>
+                  <p>
+                    Estimate of People Served:{' '}
+                    {detailsData.Individuals_directly_served}
+                  </p>
+                  <p>AVG Households Served:{detailsData.inc_income}</p>
+                  <p>Economic Impact (RWF) : {detailsData.inc_income_rwf}</p>
+                  <p>Economic Impact (USD) : {detailsData.inc_income_usd}</p>
                   <p>Project Stage: {detailsData.stage}</p>
                   <p>Province: {detailsData.province}</p>
                   <p>District: {detailsData.district}</p>
