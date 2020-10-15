@@ -13,6 +13,7 @@ import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { BridgesContext } from '../../../state/bridgesContext';
+import RenderGraph from './Graphs/RenderGraph';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -66,7 +67,6 @@ const BridgeCard = () => {
               title="bridge_image"
               image={detailsData.bridge_image}
             />
-
             <CardContent id="card_content">
               <Typography
                 gutterBottom
@@ -76,6 +76,10 @@ const BridgeCard = () => {
                 component="h2"
               >
                 <strong>{detailsData.bridge_site_name}</strong>
+                {/* <GraphContainter data={detailsData} /> */}
+                <div clasName="graphDiv">
+                  <RenderGraph data={detailsData} />
+                </div>
                 <p>
                   Estimate of People Served:{' '}
                   {detailsData.Individuals_directly_served}
