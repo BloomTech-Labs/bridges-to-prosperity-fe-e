@@ -229,7 +229,13 @@
 #card_content {
   background-color: #161345;
 }
-
+.graph {
+  height: auto;
+  width: auto;
+}
+.graphDiv {
+  width: 200px;
+}
 .no-bridge-image{
   padding: .5rem;
   text-align: center;
@@ -240,6 +246,3 @@
   width: 100%;
 }
 
-#bridge_name_text {
-  width: 200px;
-}

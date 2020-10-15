@@ -11,6 +11,7 @@ import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { BridgesContext } from '../../../state/bridgesContext';
+import RenderGraph from './Graphs/RenderGraph';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -57,7 +58,6 @@ const BridgeCard = () => {
                 Close
               </div>
             </div>
-
             <div className="bridge-image">
               {detailsData.bridge_image ? (
                 <CardMedia
@@ -83,6 +83,16 @@ const BridgeCard = () => {
                 width="100%"
               >
                 <strong>{detailsData.bridge_site_name}</strong>
+                <div clasName="graphDiv">
+                  <RenderGraph data={detailsData} />
+                </div>
+                <p>
+                  Estimate of People Served:{' '}
+                  {detailsData.Individuals_directly_served}
+                </p>
+                <p>AVG Households Served:{detailsData.inc_income}</p>
+                <p>Economic Impact (RWF) : {detailsData.inc_income_rwf}</p>
+                <p>Economic Impact (USD) : {detailsData.inc_income_usd}</p>
               </Typography>
               <IconButton
                 style={{ color: 'white' }}
