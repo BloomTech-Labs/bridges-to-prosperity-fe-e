@@ -38,21 +38,24 @@
       justify-content: flex-end;
       width: 100%;
       text-align: right;
-
     }
 
     .close_button {
+
     border: 1px solid #161345;
     width: 30%;
     text-align: center;
     margin: 2px;
 
 
+
+      border: 1px solid #161345;
+      width: 30%;
+      text-align: center;
+
     }
     .closeButton:hover {
       cursor: pointer;
-
-
     }
 
     .detailsInfo {
@@ -90,17 +93,18 @@
       top: 10;
       margin: 9px 0 0 10px;
       z-index: 0;
+      display: none;
     }
     .check-box {
       position: absolute;
-      margin: 10px 0 0 380px;
+      margin: 8px 0 0 50px;
       background-color: white;
       z-index: 1;
       box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
       border-radius: 5px;
 
       .check-box-section {
-        height: 36px;
+        height: 28px;
         padding: 10px 5px;
         width: 100%;
         display: flex;
@@ -118,7 +122,13 @@
   }
 
   .toggle {
-    display: none;
+    display: block;
+    position: absolute;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin: 5px 0 0 5px;
   }
   @media only screen and (max-width: 1350px) {
     width: 100%;
@@ -216,7 +226,7 @@
   height: 100%;
 }
 
-#card_content{
+#card_content {
   background-color: #161345;
 }
 
