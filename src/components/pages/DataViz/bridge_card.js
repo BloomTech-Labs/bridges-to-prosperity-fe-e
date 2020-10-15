@@ -86,13 +86,6 @@ const BridgeCard = () => {
                 <div clasName="graphDiv">
                   <RenderGraph data={detailsData} />
                 </div>
-                <p>
-                  Estimate of People Served:{' '}
-                  {detailsData.Individuals_directly_served}
-                </p>
-                <p>AVG Households Served:{detailsData.inc_income}</p>
-                <p>Economic Impact (RWF) : {detailsData.inc_income_rwf}</p>
-                <p>Economic Impact (USD) : {detailsData.inc_income_usd}</p>
               </Typography>
               <IconButton
                 style={{ color: 'white' }}
