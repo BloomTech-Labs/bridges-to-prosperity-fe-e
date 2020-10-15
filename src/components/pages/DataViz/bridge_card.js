@@ -58,13 +58,20 @@ const BridgeCard = () => {
               </div>
             </div>
 
-            <CardMedia
-              id="card_media"
-              className={classes.media}
-              title="bridge_image"
-              image={detailsData.bridge_image}
-            />
-
+            <div className="bridge-image">
+              {detailsData.bridge_image ? (
+                <CardMedia
+                  id="card_media"
+                  className={classes.media}
+                  title="bridge_image"
+                  image={detailsData.bridge_image}
+                />
+              ) : (
+                <div className="no-bridge-image">
+                  Bridge Image is Unavailiable
+                </div>
+              )}
+            </div>
             <CardContent id="card_content">
               <Typography
                 gutterBottom
