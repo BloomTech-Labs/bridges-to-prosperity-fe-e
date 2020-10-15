@@ -60,13 +60,20 @@ const BridgeCard = () => {
                 Close
               </div>
             </div>
-
-            <CardMedia
-              id="card_media"
-              className={classes.media}
-              title="bridge_image"
-              image={detailsData.bridge_image}
-            />
+            <div className="bridge-image">
+              {detailsData.bridge_image ? (
+                <CardMedia
+                  id="card_media"
+                  className={classes.media}
+                  title="bridge_image"
+                  image={detailsData.bridge_image}
+                />
+              ) : (
+                <div className="no-bridge-image">
+                  Bridge Image is Unavailiable
+                </div>
+              )}
+            </div>
             <CardContent id="card_content">
               <Typography
                 gutterBottom
@@ -76,7 +83,6 @@ const BridgeCard = () => {
                 component="h2"
               >
                 <strong>{detailsData.bridge_site_name}</strong>
-                {/* <GraphContainter data={detailsData} /> */}
                 <div clasName="graphDiv">
                   <RenderGraph data={detailsData} />
                 </div>
