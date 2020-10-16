@@ -64,7 +64,6 @@
       align-items: center;
       flex-direction: column;
       color: whitesmoke;
-      // background-color: grey;
 
       .bridge-image {
         display: flex;
@@ -243,6 +242,17 @@
   font-family: 'bridge-font-bd';
 }
 #card_media {
+  min-height: 200px;
   width: 100%;
+}
+
+.bottom_info{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.bottom_info_cols{
+  width: 45%;
+
 }
 

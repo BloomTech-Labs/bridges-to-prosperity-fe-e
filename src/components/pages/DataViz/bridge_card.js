@@ -86,13 +86,6 @@ const BridgeCard = () => {
                 <div clasName="graphDiv">
                   <RenderGraph data={detailsData} />
                 </div>
-                <p>
-                  Estimate of People Served:{' '}
-                  {detailsData.Individuals_directly_served}
-                </p>
-                <p>AVG Households Served:{detailsData.inc_income}</p>
-                <p>Economic Impact (RWF) : {detailsData.inc_income_rwf}</p>
-                <p>Economic Impact (USD) : {detailsData.inc_income_usd}</p>
               </Typography>
               <IconButton
                 style={{ color: 'white' }}
@@ -111,19 +104,23 @@ const BridgeCard = () => {
           <Collapse in={expanded} timeout="auto" unmountOnExit>
             <CardContent>
               <Typography paragraph>
-                <div>
-                  <p>
-                    Estimate of People Served:{' '}
-                    {detailsData.Individuals_directly_served}
-                  </p>
-                  <p>AVG Households Served:{detailsData.inc_income}</p>
-                  <p>Economic Impact (RWF) : {detailsData.inc_income_rwf}</p>
-                  <p>Economic Impact (USD) : {detailsData.inc_income_usd}</p>
-                  <p>Project Stage: {detailsData.stage}</p>
-                  <p>Province: {detailsData.province}</p>
-                  <p>District: {detailsData.district}</p>
-                  <p>Bridge Type: {detailsData.type}</p>
-                  <p>Project Sub Stage: {detailsData.sub_stage}</p>
+                <div className="bottom_info">
+                  <div className="bottom_info_cols">
+                    <p>Province: {detailsData.province}</p>
+                    <p>District: {detailsData.district}</p>
+                    <p>Bridge Type: {detailsData.type}</p>
+                    <p>Project Sub Stage: {detailsData.sub_stage}</p>
+                    <p>Project Stage: {detailsData.stage}</p>
+                  </div>
+                  <div className="bottom_info_cols">
+                    <p>
+                      Estimate of People Served:{' '}
+                      {detailsData.Individuals_directly_served}
+                    </p>
+                    <p>AVG Households Served:{detailsData.inc_income}</p>
+                    <p>Economic Impact (RWF) : {detailsData.inc_income_rwf}</p>
+                    <p>Economic Impact (USD) : {detailsData.inc_income_usd}</p>
+                  </div>
                 </div>
               </Typography>
             </CardContent>
