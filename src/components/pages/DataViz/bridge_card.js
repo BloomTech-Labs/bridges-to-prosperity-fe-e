@@ -82,7 +82,11 @@ const BridgeCard = () => {
                 component="h2"
                 width="100%"
               >
-                <strong>{detailsData.bridge_site_name}</strong>
+                <strong>
+                  {' '}
+                  <span id="bridge_name_intro"> Bridge name:</span>{' '}
+                  {detailsData.bridge_site_name}
+                </strong>
                 <div clasName="graphDiv">
                   <RenderGraph data={detailsData} />
                 </div>
