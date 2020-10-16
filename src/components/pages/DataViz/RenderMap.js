@@ -2,7 +2,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import 'react-map-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import { MenuOutlined } from '@ant-design/icons';
 import useKeypress from '../../common/UseKeypress';
-import bridgeIconGreen from '../../../styles/imgs/bridgeIconGreen.png';
+import bridgePin from '../../../styles/imgs/pin.png';
 import React, { useState, useRef, useContext } from 'react';
 import ReactMapGL, {
   FullscreenControl,
@@ -196,7 +196,7 @@ const RenderMap = () => {
         onLoad={() => {
           if (!mapRef) return;
           const map = mapRef.current.getMap();
-          map.loadImage(bridgeIconGreen, (error, image) => {
+          map.loadImage(bridgePin, (error, image) => {
             if (error) return;
             map.addImage('myPin', image);
           });
@@ -206,7 +206,7 @@ const RenderMap = () => {
           <Layer
             id="data"
             type="symbol"
-            layout={{ 'icon-image': 'myPin', 'icon-size': 0.35 }}
+            layout={{ 'icon-image': 'myPin', 'icon-size': 0.75 }}
           />
         </Source>
         <div className="toggle">
