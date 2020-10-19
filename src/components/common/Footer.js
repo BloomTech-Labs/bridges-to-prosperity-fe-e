@@ -5,26 +5,47 @@ const Footer = () => {
     <div className="footer">
       <div className="links">
         <div className="link-list">
-          <a href="https://bridgestoprosperity.org/" target="_">
+          <a
+            href="https://bridgestoprosperity.org/"
+            target="_"
+            data-testid="testOne"
+          >
             Bridges To Prosperity
           </a>
-          <a href="https://bridgestoprosperity.org/join-us/" target="_">
+          <a
+            href="https://bridgestoprosperity.org/join-us/"
+            target="_"
+            data-testid="testTwo"
+          >
             Join Us
           </a>
-          <a href="https://bridgestoprosperity.org/faqs/" target="_">
+          <a
+            href="https://bridgestoprosperity.org/faqs/"
+            target="_"
+            data-testid="testThree"
+          >
             FAQS
           </a>
         </div>
         <div className="link-list">
-          <a href="https://bridgestoprosperity.org/contact/" target="_">
+          <a
+            href="https://bridgestoprosperity.org/contact/"
+            target="_"
+            data-testid="testFour"
+          >
             Contact Us
           </a>
-          <a href="https://bridgestoprosperity.org/financials/" target="_">
+          <a
+            href="https://bridgestoprosperity.org/financials/"
+            target="_"
+            data-testid="testFive"
+          >
             Financials
           </a>
           <a
             href="https://bridgestoprosperity.org/donor-privacy-policy/"
             target="_"
+            data-testid="testSix"
           >
             Donor Privacy Policy
           </a>
