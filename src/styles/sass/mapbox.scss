@@ -41,48 +41,25 @@
     }
 
     .close_button {
-
-    border: 1px solid hotpink;
-    width: 30%;
-    text-align: center;
-    margin: 2px;
-
-
+      border: 1px solid hotpink;
+      width: 30%;
+      text-align: center;
+      margin: 2px;
 
       border: 1px solid #161345;
       width: 30%;
       text-align: center;
-
     }
     .closeButton:hover {
       cursor: pointer;
     }
 
-    .detailsInfo {
-      font-weight: 600;
+    .bridge-image {
       display: flex;
+      justify-content: center;
       align-items: center;
       flex-direction: column;
-      color: whitesmoke;
-
-      .bridge-image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        box-shadow: 0px 2px 30px 0px rgba(148, 142, 148, 1);
-
-        img {
-          height: 100%;
-          width: 100%;
-        }
-        p {
-          font-size: 0.5rem;
-        }
-      }
-    }
-    .detailsInfo p {
-      font-size: 1.2rem;
+      box-shadow: 0px 2px 30px 0px rgba(148, 142, 148, 1);
     }
   }
   .desktop {
@@ -192,32 +169,6 @@
         border: none;
         margin-top: 1%;
       }
-
-      .detailsInfo h2 {
-        width: 100%;
-        text-align: center;
-        font-size: 1.2rem;
-      }
-      .detailsInfo p {
-        width: 100%;
-        font-size: 12px;
-      }
-      .detailsInfo .bridge-image {
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-      }
-      .detailsInfo .bridge-image img {
-        width: 125px;
-      }
-    }
-  }
-  .popup {
-    padding-top: 5%;
-    p {
-      font-size: 0.8vw;
-      line-height: 0.8vw;
-      font-weight: 400;
     }
   }
 }
@@ -242,8 +193,8 @@
 .graphDiv {
   width: 200px;
 }
-.no-bridge-image{
-  padding: .5rem;
+.no-bridge-image {
+  padding: 0.5rem;
   text-align: center;
   color: #009149;
   font-family: 'bridge-font-bd';
@@ -252,18 +203,27 @@
   min-height: 200px;
   width: 100%;
 }
-#bridge_name_intro{
+#bridge_name_intro {
   font-size: medium;
-  margin-right: 2pxç;
+  margin-right: 2px;
 }
 
-.bottom_info{
+.bottom_info {
   display: flex;
   justify-content: space-evenly;
+  font-size: 1rem;
 }
 
-.bottom_info_cols{
+.bottom_info_cols {
   width: 45%;
-
+}
+.bottomInfoTags {
+  font-size: 0.75rem;
+  text-decoration: underline;
 }
 
+@media only screen and (min-width: 1800px) {
+  .bottom_info_cols p {
+    font-size: 1rem;
+  }
+}
