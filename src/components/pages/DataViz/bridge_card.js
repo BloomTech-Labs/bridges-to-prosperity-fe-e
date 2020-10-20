@@ -110,20 +110,52 @@ const BridgeCard = () => {
               <Typography paragraph>
                 <div className="bottom_info">
                   <div className="bottom_info_cols">
-                    <p>Province: {detailsData.province}</p>
-                    <p>District: {detailsData.district}</p>
-                    <p>Bridge Type: {detailsData.type}</p>
-                    <p>Project Sub Stage: {detailsData.sub_stage}</p>
-                    <p>Project Stage: {detailsData.stage}</p>
+                    <p>
+                      <span className="bottomInfoTags">Province:</span>{' '}
+                      {detailsData.province}
+                    </p>
+                    <p>
+                      <span className="bottomInfoTags">District:</span>{' '}
+                      {detailsData.district}
+                    </p>
+                    <p>
+                      <span className="bottomInfoTags">Bridge Type:</span>{' '}
+                      {detailsData.type}
+                    </p>
+                    <p>
+                      <span className="bottomInfoTags">Project Sub Stage:</span>{' '}
+                      {detailsData.sub_stage}
+                    </p>
+                    <p>
+                      <span className="bottomInfoTags">Project Stage:</span>{' '}
+                      {detailsData.stage}
+                    </p>
                   </div>
                   <div className="bottom_info_cols">
                     <p>
-                      Estimate of People Served:{' '}
+                      <span className="bottomInfoTags">
+                        Estimate of People Served:
+                      </span>{' '}
                       {detailsData.Individuals_directly_served}
                     </p>
-                    <p>AVG Households Served:{detailsData.inc_income}</p>
-                    <p>Economic Impact (RWF) : {detailsData.inc_income_rwf}</p>
-                    <p>Economic Impact (USD) : {detailsData.inc_income_usd}</p>
+                    <p>
+                      <span className="bottomInfoTags">
+                        AVG Households Served:
+                      </span>{' '}
+                      {detailsData.inc_income}
+                    </p>
+                    <p>
+                      <span className="bottomInfoTags">
+                        Economic Impact (RWF):
+                      </span>{' '}
+                      {detailsData.inc_income_rwf}
+                    </p>
+                    <p>
+                      <span className="bottomInfoTags">
+                        Economic Impact (USD):
+                      </span>{' '}
+                      {detailsData.inc_income_usd}
+                    </p>
                   </div>
                 </div>
               </Typography>
