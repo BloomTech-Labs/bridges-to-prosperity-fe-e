@@ -57,6 +57,9 @@ const FilterBridgesCheckboxes = props => {
         />{' '}
         Under Construction
       </div>
+      <div className="restricted">
+        <Checkbox style={{ margin: '0 5px' }} /> Saved
+      </div>
     </div>
   );
 };
