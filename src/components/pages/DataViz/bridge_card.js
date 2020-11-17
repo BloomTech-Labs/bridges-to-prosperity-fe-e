@@ -43,22 +43,12 @@ const BridgeCard = () => {
     setExpanded(!expanded);
   };
 
-  const validateLoggedIn = () => {
-    localStorage.getItem('okta-cache-storage')
-      ? console.log('saved')
-      : history.push('/login');
-  };
-  const addSavedLocation = () => {
-    axios.post().then(res => {});
-  };
-
   return (
     <Draggable>
       <div className="detailsContainer">
         <Card className={detailsData.root}>
           <CardActionArea>
             <div className="closeArea">
-              <button onClick={() => validateLoggedIn()}>Save</button>
               <div
                 className="close_button"
                 onKeyDown={e => {
