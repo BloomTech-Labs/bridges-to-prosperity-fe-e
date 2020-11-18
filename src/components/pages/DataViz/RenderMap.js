@@ -15,6 +15,7 @@ import { BridgesContext } from '../../../state/bridgesContext';
 // import DetailsInfo from './DetailsInfo';
 import BridgeCard from './bridge_card';
 import FilterBridgesCheckboxes from './FilterBridgesCheckboxes';
+import DownloadButton from '../../common/DownloadButton.js';
 
 let maxBounds = {
   minLatitude: -70,
@@ -263,6 +264,7 @@ const RenderMap = () => {
       </ReactMapGL>
       {!fullscreen && detailsData && <BridgeCard />}
       {/* {!fullscreen && detailsData && <DetailsInfo />} */}
+      <DownloadButton />
     </div>
   );
 };

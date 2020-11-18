@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-// import CleanedData from '../../data/cleaned3.csv';
-import axios from 'axios';
 
 const DownloadButton = () => {
   return (
-    <a href="http://btp-labs28-ds-e.eba-p8n7yppy.us-east-1.elasticbeanstalk.com/csv">
+    <a href="https://e-ds-labs28.bridgestoprosperity.dev/">
       <button className="downloadButton">Download Data</button>
     </a>
   );
