@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const DownloadButton = () => {
   return (
-    <a href="https://e-ds-labs28.bridgestoprosperity.dev/">
+    <a href="https://e-ds-labs28.bridgestoprosperity.dev/csv">
       <button className="downloadButton">Download Data</button>
     </a>
   );
