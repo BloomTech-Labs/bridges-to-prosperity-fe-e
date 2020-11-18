@@ -8,14 +8,14 @@ const RenderGraph = props => {
   useEffect(() => {
     axios
       .get(
-        `http://btp-labs28-ds-e.eba-p8n7yppy.us-east-1.elasticbeanstalk.com/viz_nate3/{impact_score}?project_code=${props.data.project_code}`
+        `https://e-ds-labs28.bridgestoprosperity.dev/viz_nate3/{impact_score}?project_code=${props.data.project_code}`
       )
       .then(res => {
         setGraph1(JSON.parse(res.data));
       });
     axios
       .get(
-        `http://btp-labs28-ds-e.eba-p8n7yppy.us-east-1.elasticbeanstalk.com/viz_noah/{knn_visualization}?project_code=${props.data.project_code}`
+        `https://e-ds-labs28.bridgestoprosperity.dev/viz_noah/{knn_visualization}?project_code=${props.data.project_code}`
       )
       .then(res => {
         setGraph2(JSON.parse(res.data));
