@@ -31,7 +31,7 @@
     top: 0;
     cursor: move;
     color: whitesmoke;
-    box-shadow: 0px 2px 30px 0px rgba(148, 142, 148, 1);
+    box-shadow: 0px 2px 3px 0px rgba(148, 142, 148, 1);
 
     .closeArea {
       display: flex;
@@ -41,14 +41,14 @@
     }
 
     .close_button {
-      border: 1px solid hotpink;
+      border: 2px solid #161345;
       width: 30%;
       text-align: center;
-      margin: 2px;
-
-      border: 1px solid #161345;
-      width: 30%;
-      text-align: center;
+      background-color: #009149;
+      color: white;
+      font-family: 'bridge-font';
+      font-weight: 400;
+      margin: 7px;
     }
     .closeButton:hover {
       cursor: pointer;
@@ -191,7 +191,7 @@
   width: auto;
 }
 .graphDiv {
-  width: 200px;
+  width: auto;
 }
 .no-bridge-image {
   padding: 0.5rem;

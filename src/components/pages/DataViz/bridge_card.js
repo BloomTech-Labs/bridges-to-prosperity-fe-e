@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import axios from 'axios';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import clsx from 'clsx';
@@ -12,6 +13,7 @@ import IconButton from '@material-ui/core/IconButton';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { BridgesContext } from '../../../state/bridgesContext';
 import RenderGraph from './Graphs/RenderGraph';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -36,7 +38,7 @@ const BridgeCard = () => {
   const { detailsData, setDetailsData } = useContext(BridgesContext);
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
-
+  const history = useHistory();
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
@@ -49,7 +51,6 @@ const BridgeCard = () => {
             <div className="closeArea">
               <div
                 className="close_button"
-                // className="closeButton"
                 onKeyDown={e => {
                   console.log(e);
                 }}
@@ -87,7 +88,7 @@ const BridgeCard = () => {
                   <span id="bridge_name_intro"> Bridge name:</span>{' '}
                   {detailsData.bridge_site_name}
                 </strong>
-                <div clasName="graphDiv">
+                <div className="graphDiv">
                   <RenderGraph data={detailsData} />
                 </div>
               </Typography>

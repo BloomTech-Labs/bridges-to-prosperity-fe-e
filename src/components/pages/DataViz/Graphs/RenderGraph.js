@@ -1,52 +1,92 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
+import axios from 'axios';
 
-const RenderGraph = () => {
-  const trace1 = {
-    y: [5500, 200, 3302],
-    x: ['Total Population', 'Total Served', 'Growth'],
-    type: 'bar',
-    name: 'Social Effect',
-  };
-  const trace2 = {
-    y: [500, 3300, 302],
-    x: ['Total Population', 'Total Served', 'Growth'],
-    type: 'bar',
-    name: 'Economic Effect (USD)',
-  };
-  const trace3 = {
-    y: [5200, 3320, 3602],
-    x: ['Total Population', 'Total Served', 'Growth'],
-    type: 'bar',
-    name: 'Economic Effect (RWF)',
-  };
-
-  const data = [trace1, trace2, trace3];
-  const layout = {
-    width: 490,
-    height: 320,
-    font: { size: 11 },
-    showlegend: true,
-    legend: {
-      x: 0.5,
-      xanchor: 'center',
-      y: 1.6,
-    },
-    plot_bgcolor: '#161345',
-    color: 'white',
-  };
+const RenderGraph = props => {
+  const [graph1, setGraph1] = useState({});
+  const [graph2, setGraph2] = useState({});
+  useEffect(() => {
+    axios
+      .get(
+        `http://btp-labs28-ds-e.eba-p8n7yppy.us-east-1.elasticbeanstalk.com/viz_nate3/{impact_score}?project_code=${props.data.project_code}`
+      )
+      .then(res => {
+        setGraph1(JSON.parse(res.data));
+      });
+    axios
+      .get(
+        `http://btp-labs28-ds-e.eba-p8n7yppy.us-east-1.elasticbeanstalk.com/viz_noah/{knn_visualization}?project_code=${props.data.project_code}`
+      )
+      .then(res => {
+        setGraph2(JSON.parse(res.data));
+      });
+  }, [props.data.project_code]);
+  const data = graph1.data;
+  let layout = graph1.layout;
+  const data2 = graph2.data;
+  let layout2 = graph2.layout;
 
   return (
-    <Plot
-      className="graph"
-      data={data}
-      layout={layout}
-      config={{
-        displayModeBar: false,
-        responsive: true,
-        fillFrame: true,
-      }}
-    />
+    <div>
+      <div>
+        <Plot
+          className="graph"
+          data={data}
+          layout={{
+            layout,
+            width: 600,
+            height: 360,
+            margin: {
+              l: 250,
+              r: 25,
+              b: 75,
+              t: 50,
+            },
+            title: 'Key Impact Metrics (Percentile)',
+            xaxis: {
+              title: 'Percentile',
+            },
+          }}
+          config={{
+            displayModeBar: false,
+            responsive: true,
+            fillFrame: true,
+            dragMode: false,
+          }}
+        />
+      </div>
+      <div>
+        <Plot
+          className="graph"
+          data={data2}
+          layout={{
+            layout2,
+            width: 600,
+            height: 360,
+            margin: {
+              l: 75,
+              r: 50,
+              b: 75,
+              t: 50,
+            },
+            xaxis: {
+              title: 'Unsuitable',
+            },
+            yaxis: {
+              title: 'Suitable',
+            },
+            title: 'Nearest Neighbors',
+          }}
+          config={{
+            displayModeBar: false,
+            responsive: true,
+            fillFrame: true,
+            scrollZoom: true,
+            dragMode: false,
+          }}
+        />
+      </div>
+    </div>
   );
 };
 
